@@ -97,7 +97,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Geliştirici
-"""
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -110,21 +110,21 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-"""
+
 #   Yayın
 
-DEBUG = False
-
-ALLOWED_HOSTS = ['etkinlikpdf.pk', '162.22.75.75']
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'etkinlik',
-        'USER': 'baskanlar',
-        'PASSWORD': 'trakyaedirne22',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DEBUG = False
+#
+# ALLOWED_HOSTS = ['etkinlikpdf.pk', '162.22.75.75']
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'etkinlik',
+#         'USER': 'baskanlar',
+#         'PASSWORD': 'trakyaedirne22',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
