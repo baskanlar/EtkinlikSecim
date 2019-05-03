@@ -46,5 +46,5 @@ def etkinlik_mail(request):
         etkinlik_mails.mail = mail
         etkinlik_mails.etkinlik = etkinlikaa
         etkinlik_mails.save()
-        
+
     return JsonResponse({'status': 'Tamamdır Abi'}, safe=False)
