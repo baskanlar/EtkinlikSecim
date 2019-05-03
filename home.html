@@ -5,6 +5,8 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Title</title>
 </head>
 <body>
@@ -17,16 +19,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"> 
+      <li class="nav-item">
         <a href="#" class="nav-link">Anasayfa</a>
       </li>
-      <li class="nav-item"> 
+      <li class="nav-item">
         <a href="#" class="nav-link">Hakkımızda</a>
       </li>
     </ul>
   </div>
 </nav>
-  
+
   <div class="container">
   <div class="row">
   <div class="col-sm-12">
@@ -39,72 +41,99 @@
   <br>
 
 <h3 align="center" class="display-5"><u>11 Mayıs Cumartesi</u></h3>
-
-<table class="table">
+<div class="table-responsive">
+  <table class="table">
 <thead class="thead-dark">
 <tr>
-<th scope="col">Saat</th>
-<th scope="col">1. Salon</th>
-<th scope="col">2. Salon</th>
+<th scope="col" width="20%">Saat</th>
+<th scope="col" width="40%">1. Salon</th>
+<th scope="col" width="5%"></th>
+<th scope="col" width="%40">2. Salon</th>
+<th scope="col" width="%5"></th>
 </tr>
 </thead>
 
 <tbody>
 <tr>
-<td>10:00-10:45</td>
-<td>Güvenlik, Güvenilirlik, Rastgelelik, Açıklık<br> &ndash; <em>Chris Stephenson </em></td>
-<td>ICS Grup Linux Dönüşümü<br> &ndash; <em>Fatih Genç </em><br><br>Kurumlarda Özgür Yazılımlara Göç<br> &ndash; <em>Akgün A. Yardımcı </em></td>
 
+
+<td >10:00-10:45</td>
+<td >Güvenlik, Güvenilirlik, Rastgelelik, Açıklık<br> &ndash; <em>Chris Stephenson </em>  </td>
+<td ><input type="radio" name="1"> </td>
+<td >ICS Grup Linux Dönüşümü<br> &ndash; <em>Fatih Genç</em><br><br>Kurumlarda Özgür Yazılımlara Göç<br> &ndash; <em>Akgün A. Yardımcı</em></td>
+<td ><input type="radio" name="1"> </td>
 </tr>
 
 <tr>
 <td>11:00-11:45</td>
 <td>Building FOSS Communities and Empowering Diversity<br> &ndash; <em>Kristi Progri (*) </em></td>
+<td ><input type="radio" name="2"> </td>
 <td>PostgreSQL ile Veri Maskeleme<br> &ndash; <em>Mehmet Emin Karakaş </em></td>
+<td ><input type="radio" name="2"> </td>
+
 </tr>
 
 <tr>
-<td>12:00-13:00</td>
+<td >12:00-13:00</td>
 <td>Kişisel Verilerin Koruması ve Özgür Yazılımların Önemi<br> &ndash; <em>Alper Atmaca </em></td>
+<td ><input type="radio" name="3"> </td>
 <td>pgBackRest ile PostgreSQL&rsquo;de Yedekleme<br> &ndash; <em>Zekiye Aydemir</em><br><br>PostgreSQL Yüksek Erişilebilirlik ve Ölçekleme Çözümleri<br> &ndash; <em>Doruk Fişek</em></td>
+<td ><input type="radio" name="3"> </td>
 </tr>
 
 <tr>
-<td>13:00-14:00</td>
+<td >13:00-14:00</td>
 <td>Öğle Arası</td>
+<td></td>
+<td></td>
 <td></td>
 </tr>
 
 <tr>
 <td>14:00-14:45</td>
 <td>Özgür Yazılımlarla Mahremiyet Korunumu <br> &ndash; <em>Onur Çelik</em></td>
+<td><input type="radio" name="4"> </td>
 <td>Değişim ve Sonrası (!) <br> &ndash; Aziz Arslan - MetGlobal (**)</td>
+<td><input type="radio" name="4"> </td>
 </tr>
 
 <tr>
 <td>15:00-15:45</td>
 <td>Özgür Haritacılık <br> &ndash; <em>Dilan Çelik, Burcu Bayaslı, Tuğçe Yıldız</em></td>
+<td><input type="radio" name="5"> </td>
 <td>Ağ Yöneticileri İçin Özgür Yazılımlar <br> &ndash; <em>Alper Yalçıner</em></td>
+<td><input type="radio" name="5"> </td>
 </tr>
 
 <tr>
 <td>16:00-17:00</td>
 <td>Mustafa Akgül Anma Oturumu</td>
 <td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 
+</div>
+
+<center>
+<button class="btn btn-outline-secondary">Seçimleri Sıfırla</button>
+
+</center>
+
 <hr>
 <br>
 <h3 align="center" class="display-5"><u>12 Mayıs Pazar</u></h3>
-
-<table class="table">
+<div class="table-responsive">
+  <table class="table">
 <thead class="thead-dark">
 <tr>
-<th scope="col">Saat</th>
-<th scope="col">1. Salon</th>
-<th scope="col">2. Salon</th>
+<th scope="col" width="20%">Saat</th>
+<th scope="col" width="40%">1. Salon</th>
+<th scope="col" width="5%"></th>
+<th scope="col" width="40%">2. Salon</th>
+<th scope="col" width="5%"></th>
 </tr>
 </thead>
 
@@ -112,47 +141,68 @@
 <tr>
 <td>10:00-10:45</td>
 <td>Linux&rsquo;un Active Directory Entegrasyonu<br> &ndash; <em>Erkan Esmer</em></td>
+<td><input type="radio" name="6" value="ilk" ></td>
 <td>Blokzincir Dünyasında Özgür Yazılımlar <br> &ndash; <em>Ege Tekiner</em><br><br>En Sevdiğim Defterim “Jupyter” :)<br>&ndash; <em>Gönül Aycı</em></td>
+<td><input type="radio" name="6" value="ikinci"></td>
 
 </tr>
 
 <tr>
 <td>11:00-11:45</td>
 <td>Otonom sistemler için Robot İşletim Sistemi (ROS)<br> &ndash; <em>Can Korkut, Çağrı Mert Kemerkaya</em></td>
+<td ><input type="radio" name="7"> </td>
 <td>Kong ile Mikroservis Yönetimi<br> &ndash; <em>Mert Şimşek</em><br><br> Neden/Nasıl: Kurumsal Bilgi İşlem Altyapısında Özgür Yazılımlar <br>  &ndash; Sinan Burak Öztürk - Gözen Systems (**)</td>
+<td ><input type="radio" name="7"> </td>
 </tr>
 
 <tr>
 <td>12:00-13:00</td>
 <td>Linux Çekirdeğinde Paketlerin Yolculuğu <br> &ndash; <em>R. Engür Pişirici</em></td>
+<td ><input type="radio" name="8"> </td>
 <td>Ayrıştırılmış (Decoupled) Drupal 8&rsquo;e Giriş<br> &ndash; <em>K. Burak Özdemir</em></td>
+<td ><input type="radio" name="8"> </td>
 </tr>
 
 <tr>
 <td>13:00-14:00</td>
 <td>Öğle Arası</td>
 <td></td>
+<td > </td>
+<td ></td>
 </tr>
 
 <tr>
 <td>14:00-14:45</td>
 <td>Özgür Yazılımlar ile Sayısal Sinyal İşleme<br> &ndash; <em>Murat Sever</em></td>
+<td ><input type="radio" name="9"> </td>
 <td>Java Web Uygulamalarında Doğrulama Yöntemleri<br> &ndash;<em>Adilcan Eren</em><br><br>Spring&rsquo;de Better Error Pages ile Etkili Hata Yonetimi<br> &ndash; <em>Ersan Ceylan</em></td>
+<td ><input type="radio" name="9"> </td>
 </tr>
 
 <tr>
 <td>15:00-15:45</td>
 <td>OpenShift Kubernetes Dağıtımı (OKD) <br> &ndash; <em>Erdem Bayer</em></td>
+<td ><input type="radio" name="10"> </td>
 <td>ESLint ile Kaliteli JavaScript Yazmak <br> &ndash; <em>İsmail Arılık</em></td>
+<td ><input type="radio" name="10"> </td>
 </tr>
 
 <tr>
 <td>16:00-17:00</td>
 <td>Proxmox ile Sanallaştırma <br> &ndash; <em>Levent Emmungil</em></td>
+<td ><input type="radio" name="11"> </td>
 <td>S.O.L.I.D Prensipleri ile ReactJS<br> &ndash; <em>Mehmet Köse</em></td>
+<td ><input type="radio" name="11"> </td>
 </tr>
 </tbody>
 </table>
+</div>
+<center>
+  <button class="btn btn-outline-secondary">Seçimleri Sıfırla</button>
+</center>
+
+
+
 <hr>
 </div>
 
@@ -163,9 +213,11 @@
   </div>
 </div>
 
+<!--
 </div>
 </div>
 </div>
+-->
 
 </body>
 </html>

@@ -1,34 +1,172 @@
-{%  load static %}
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <title>Title</title>
 </head>
 <body>
 
-<div class="container" style="font-family: 'Segoe UI'">
-  <nav class="navbar sticky-top navbar-expand-lg navbar-light  bg-dark">
-      <a href="#" class="navbar-brand"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ac">
-          <span class="navbar-toggler-icon"></span>
-      </button>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#" ><h5 class="display-5">Özgür Yazılım Günleri</h5></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-      <div collapse navbar-collapse id="ac">
-          <ul class="navbar-nav mr-auto">
-              <li class="nav-item">
-                  <a href="#" class="nav-link ml-auto" style="color: white;">Anasayfa</a>
-              </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item"> 
+        <a href="#" class="nav-link">Anasayfa</a>
+      </li>
+      <li class="nav-item"> 
+        <a href="#" class="nav-link">Hakkımızda</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  
+  <div class="container">
+  <div class="row">
+  <div class="col-sm-12">
 
-              <li class="nav-item">
-                  <a href="#" class="nav-link mr-auto">Hakkında</a>
-              </li>
 
-          </ul>
-      </div>
-  </nav>
+
+
+
+<div class="content">
+  <br>
+
+<h3 align="center" class="display-5"><u>11 Mayıs Cumartesi</u></h3>
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th scope="col">Saat</th>
+<th scope="col">1. Salon</th>
+<th scope="col">2. Salon</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>10:00-10:45</td>
+<td>Güvenlik, Güvenilirlik, Rastgelelik, Açıklık<br> &ndash; <em>Chris Stephenson </em></td>
+<td>ICS Grup Linux Dönüşümü<br> &ndash; <em>Fatih Genç </em><br><br>Kurumlarda Özgür Yazılımlara Göç<br> &ndash; <em>Akgün A. Yardımcı </em></td>
+
+</tr>
+
+<tr>
+<td>11:00-11:45</td>
+<td>Building FOSS Communities and Empowering Diversity<br> &ndash; <em>Kristi Progri (*) </em></td>
+<td>PostgreSQL ile Veri Maskeleme<br> &ndash; <em>Mehmet Emin Karakaş </em></td>
+</tr>
+
+<tr>
+<td>12:00-13:00</td>
+<td>Kişisel Verilerin Koruması ve Özgür Yazılımların Önemi<br> &ndash; <em>Alper Atmaca </em></td>
+<td>pgBackRest ile PostgreSQL&rsquo;de Yedekleme<br> &ndash; <em>Zekiye Aydemir</em><br><br>PostgreSQL Yüksek Erişilebilirlik ve Ölçekleme Çözümleri<br> &ndash; <em>Doruk Fişek</em></td>
+</tr>
+
+<tr>
+<td>13:00-14:00</td>
+<td>Öğle Arası</td>
+<td></td>
+</tr>
+
+<tr>
+<td>14:00-14:45</td>
+<td>Özgür Yazılımlarla Mahremiyet Korunumu <br> &ndash; <em>Onur Çelik</em></td>
+<td>Değişim ve Sonrası (!) <br> &ndash; Aziz Arslan - MetGlobal (**)</td>
+</tr>
+
+<tr>
+<td>15:00-15:45</td>
+<td>Özgür Haritacılık <br> &ndash; <em>Dilan Çelik, Burcu Bayaslı, Tuğçe Yıldız</em></td>
+<td>Ağ Yöneticileri İçin Özgür Yazılımlar <br> &ndash; <em>Alper Yalçıner</em></td>
+</tr>
+
+<tr>
+<td>16:00-17:00</td>
+<td>Mustafa Akgül Anma Oturumu</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+<hr>
+<br>
+<h3 align="center" class="display-5"><u>12 Mayıs Pazar</u></h3>
+
+<table class="table">
+<thead class="thead-dark">
+<tr>
+<th scope="col">Saat</th>
+<th scope="col">1. Salon</th>
+<th scope="col">2. Salon</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>10:00-10:45</td>
+<td>Linux&rsquo;un Active Directory Entegrasyonu<br> &ndash; <em>Erkan Esmer</em></td>
+<td>Blokzincir Dünyasında Özgür Yazılımlar <br> &ndash; <em>Ege Tekiner</em><br><br>En Sevdiğim Defterim “Jupyter” :)<br>&ndash; <em>Gönül Aycı</em></td>
+
+</tr>
+
+<tr>
+<td>11:00-11:45</td>
+<td>Otonom sistemler için Robot İşletim Sistemi (ROS)<br> &ndash; <em>Can Korkut, Çağrı Mert Kemerkaya</em></td>
+<td>Kong ile Mikroservis Yönetimi<br> &ndash; <em>Mert Şimşek</em><br><br> Neden/Nasıl: Kurumsal Bilgi İşlem Altyapısında Özgür Yazılımlar <br>  &ndash; Sinan Burak Öztürk - Gözen Systems (**)</td>
+</tr>
+
+<tr>
+<td>12:00-13:00</td>
+<td>Linux Çekirdeğinde Paketlerin Yolculuğu <br> &ndash; <em>R. Engür Pişirici</em></td>
+<td>Ayrıştırılmış (Decoupled) Drupal 8&rsquo;e Giriş<br> &ndash; <em>K. Burak Özdemir</em></td>
+</tr>
+
+<tr>
+<td>13:00-14:00</td>
+<td>Öğle Arası</td>
+<td></td>
+</tr>
+
+<tr>
+<td>14:00-14:45</td>
+<td>Özgür Yazılımlar ile Sayısal Sinyal İşleme<br> &ndash; <em>Murat Sever</em></td>
+<td>Java Web Uygulamalarında Doğrulama Yöntemleri<br> &ndash;<em>Adilcan Eren</em><br><br>Spring&rsquo;de Better Error Pages ile Etkili Hata Yonetimi<br> &ndash; <em>Ersan Ceylan</em></td>
+</tr>
+
+<tr>
+<td>15:00-15:45</td>
+<td>OpenShift Kubernetes Dağıtımı (OKD) <br> &ndash; <em>Erdem Bayer</em></td>
+<td>ESLint ile Kaliteli JavaScript Yazmak <br> &ndash; <em>İsmail Arılık</em></td>
+</tr>
+
+<tr>
+<td>16:00-17:00</td>
+<td>Proxmox ile Sanallaştırma <br> &ndash; <em>Levent Emmungil</em></td>
+<td>S.O.L.I.D Prensipleri ile ReactJS<br> &ndash; <em>Mehmet Köse</em></td>
+</tr>
+</tbody>
+</table>
+<hr>
 </div>
 
+<div class="input-group mb-3">
+  <input type="text" class="form-control" placeholder="E-Mail Adresiniz" aria-label="E-Mail Adresiniz" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-outline-secondary" type="button" id="button-addon2" onclick="aler()">Email Gönder</button>
+  </div>
+</div>
+
+</div>
+</div>
+</div>
+
+<script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
