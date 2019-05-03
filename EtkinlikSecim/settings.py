@@ -25,8 +25,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
-AUTH_USER_MODEL = 'User.User'
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -34,7 +32,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'User.apps.UserConfig',
+
+    'crispy_forms',
     'Etkinlik',
 ]
 
