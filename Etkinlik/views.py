@@ -3,7 +3,7 @@ from .models import Etkinlik, EtkinlikMail, Mail
 from django.http import JsonResponse
 import json
 from django.core import serializers
-from .etkinlikPdf import *
+from .etkinlikPdf import pdf_creates
 
 
 def kullanici_etkinlik_cek(mail):
@@ -62,3 +62,6 @@ def etkinlik_mail(request):
 
 def home_view(request):
     return render(request, 'home.html')
+
+
+
