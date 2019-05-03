@@ -21,10 +21,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'emb89f23g(_-y#$9rxs8a1(cc^r@ln0)tol#7%e&ogd!z1ay+u'
 
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -32,7 +28,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
 
     'Etkinlik',
 ]
@@ -70,12 +65,6 @@ WSGI_APPLICATION = 'EtkinlikSecim.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -107,5 +96,35 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Geliştirici
+"""
+DEBUG = True
+
+ALLOWED_HOSTS = []
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+"""
+#   Yayın
+
+DEBUG = False
+
+ALLOWED_HOSTS = ['etkinlikpdf.pk', '162.22.75.75']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'etkinlik',
+        'USER': 'baskanlar',
+        'PASSWORD': 'trakyaedirne22',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
