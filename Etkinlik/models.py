@@ -12,4 +12,12 @@ class Etkinlik(models.Model):
 
 class Mail(models.Model):
     Id = models.AutoField(primary_key=True)
-    email = models.EmailField()
+    email = models.EmailField(unique=True)
+    mail_olusturma = models.DateField(auto_now_add=True)
+
+
+class EtkinlikMail(models.Model):
+    Id = models.AutoField(primary_key=True)
+    etkinlik = models.ForeignKey('Etkinlik.Etkinlik', verbose_name='Etkinlik', on_delete=models.CASCADE,
+                                 related_name='Etkinlik')
+    mail = models.ForeignKey('Etkinlik.Mail', verbose_name='Mail', on_delete=models.CASCADE, related_name='Mail')
