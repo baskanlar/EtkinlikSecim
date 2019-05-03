@@ -4,11 +4,11 @@ from .models import User
 
 
 class UserAdmin(admin.ModelAdmin):
-    # list_display = ['email', 'name', 'admin']  # Listelerken Göstermek için
-    # list_display_links = ['name']  # link oluşturmak için
-    # list_filter = ['email', ]  # Filtreleme yapmak için
+    list_display = ['email', 'name', 'admin']  # Listelerken Göstermek için
+    list_display_links = ['name']  # link oluşturmak için
+    list_filter = ['email', ]  # Filtreleme yapmak için
 
-    # list_editable = ['ogretmen_mi', 'admin']
+    list_editable = ['email']
 
     class Meta:
         model = User
