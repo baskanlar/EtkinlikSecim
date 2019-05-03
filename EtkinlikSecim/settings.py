@@ -21,12 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'emb89f23g(_-y#$9rxs8a1(cc^r@ln0)tol#7%e&ogd!z1ay+u'
 
-# SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
 
-# Application definition
+
 AUTH_USER_MODEL = 'User.User'
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -36,6 +35,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'User.apps.UserConfig',
+    'Etkinlik',
 ]
 
 MIDDLEWARE = [
