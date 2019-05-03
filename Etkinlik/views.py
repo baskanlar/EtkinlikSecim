@@ -28,7 +28,7 @@ def etkinlik(ID):
 def etkinlik_all(request):
     try:
         data = serializers.serialize('json', Etkinlik.objects.all())
-        return JsonResponse({'data': data}, safe=False)
+        return JsonResponse(data, safe=False)
     except:
         return JsonResponse({'status': 0}, safe=False)
 
