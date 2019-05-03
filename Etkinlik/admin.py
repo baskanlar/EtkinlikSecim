@@ -5,7 +5,7 @@ from .models import Etkinlik, Mail, EtkinlikMail
 
 
 class EtkinlikAdmin(admin.ModelAdmin):
-    list_display = ['Id', 'etkinlik_adi', 'konusmaci_adi', 'salon', 'tarih',
+    list_display = ['Id', 'baslangic_saati', 'bitis_saati', 'etkinlik_adi', 'konusmaci_adi', 'salon', 'tarih',
                     'bitis_saati']  # Listelerken Göstermek için
 
     class Meta:
