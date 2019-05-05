@@ -24,25 +24,24 @@ def pdf_creates(etkinlikler, mail):
     for txt in etkinlikler:
         pdf.write(8, txt)
         pdf.ln(8)
-    pdf.output(f'{mail.split("@")[0]}.pdf', 'F')
+    pdf.output(f'{BASE_DIR}/static/{mail.split("@")[0]}.pdf', 'F')
 
 
-def email_gonder(mail):
-    msg = MIMEMultipart()
-    file1 = f'{BASE_DIR}/{mail.split("@")[0]}.pdf'
-    msg.attach(MIMEText(open(file1,"rb").read()))
-    server = smtplib.SMTP('smtp.gmail.com', 587)
-    server.ehlo()
-    server.starttls()
-    server.login('ozguryazilim.tr@gmail.com', 'OIV_0YTR(XrBTjZ8')
-
-    server.sendmail('Email', f'{mail}', msg.as_string())
-    server.close()
+# def email_gonder(mail):
+#     msg = MIMEMultipart()
+#     file1 = f'{BASE_DIR}/{mail.split("@")[0]}.pdf'
+#     msg.attach(MIMEText(open(file1,"rb").read()))
+#     server = smtplib.SMTP('smtp.gmail.com', 587)
+#     server.ehlo()
+#     server.starttls()
+#     server.login('ozguryazilim.tr@gmail.com', 'OIV_0YTR(XrBTjZ8')
+#
+#     server.sendmail('Email', f'{mail}', msg.as_string())
+#     server.close()
 
 
 def pdf_sil(name):
     os.remove(f'{BASE_DIR}/{name}')
-
 
 # email_gonder('yunusileri.tr@gmail.com')
 # mail = 'yunusileri.tr@gmail.com'

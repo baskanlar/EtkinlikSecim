@@ -97,7 +97,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Geliştirici
-"""
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -110,9 +110,9 @@ DATABASES = {
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-"""
-#   Yayın
 
+#   Yayın
+"""
 DEBUG = False
 
 ALLOWED_HOSTS = ['142.93.169.75']
@@ -128,3 +128,4 @@ DATABASES = {
         'PORT': '',
     }
 }
+"""
