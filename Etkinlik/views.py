@@ -4,6 +4,7 @@ from django.http import JsonResponse
 import json
 from django.core import serializers
 from .etkinlikPdf import pdf_creates
+from django.http import HttpResponse
 
 
 def kullanici_etkinlik_cek(mail):
