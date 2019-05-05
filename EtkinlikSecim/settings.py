@@ -126,4 +126,3 @@ DATABASES = {
         'PORT': '',
     }
 }
-

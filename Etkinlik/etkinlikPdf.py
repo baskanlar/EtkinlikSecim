@@ -11,25 +11,25 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def pdf_creates(etkinlikler, mail):
-    mails_ = f'{mail.split("@")[0]}.pdf'
-    print(mail)
-    pdf = FPDF()
-    pdf.add_page()
-    pdf.add_font('DejaVu', '', f'{BASE_DIR}/Etkinlik/DejaVuSansCondensed.ttf',
-                 uni=True)
-    pdf.set_font('DejaVu', '', 16)
-    pdf.write(8, mail)
-    pdf.ln(16)
-    pdf.set_font('DejaVu', '', 12)
-    for txt in etkinlikler:
-        pdf.write(8, txt)
-        pdf.ln(8)
-    pdf.output(f'{BASE_DIR}/static/{mails_}', 'F')
+    try:
+        mails_ = f'{mail.split("@")[0]}.pdf'
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.add_font('DejaVu', '', f'{BASE_DIR}/Etkinlik/DejaVuSansCondensed.ttf',
+                     uni=True)
+        pdf.set_font('DejaVu', '', 16)
+        pdf.write(8, mail)
+        pdf.ln(16)
+        pdf.set_font('DejaVu', '', 12)
+        for txt in etkinlikler:
+            pdf.write(8, txt)
+            pdf.ln(8)
+        pdf.output(f'{BASE_DIR}/static/{mails_}', 'F')
+        return True
+    except:
+        return False
 
-    response = HttpResponse(open(f'{BASE_DIR}/static/{mails_}', 'rb').read())
 
-    response['Content-Disposition'] = f'attachment; filename={mails_}'
-    return response
 
 # def email_gonder(mail):
 #     msg = MIMEMultipart()

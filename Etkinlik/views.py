@@ -14,7 +14,12 @@ def kullanici_etkinlik_cek(mail):
         etkinlikler.append(
             f'{etkinlik.etkinlik.baslangic_saati}-{etkinlik.etkinlik.bitis_saati}   {etkinlik.etkinlik.etkinlik_adi}    {etkinlik.etkinlik.salon}   {etkinlik.etkinlik.konusmaci_adi}')
 
-    pdf_creates(etkinlikler, mail.email)
+    if pdf_creates(etkinlikler, mail.email):
+        response = HttpResponse(open(f'{BASE_DIR}/static/{mails_}', 'rb').read())
+        response['Content-Disposition'] = f'attachment; filename={mails_}'
+        return response
+    else:
+        return JsonResponse({'status': 'Hata'}, safe=False)
 
 
 def emailCreate(email):
