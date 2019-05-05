@@ -15,10 +15,6 @@ def kullanici_etkinlik_cek(mail):
             f'{etkinlik.etkinlik.baslangic_saati}-{etkinlik.etkinlik.bitis_saati}   {etkinlik.etkinlik.etkinlik_adi}    {etkinlik.etkinlik.salon}   {etkinlik.etkinlik.konusmaci_adi}')
 
     pdf_creates(etkinlikler, mail.email)
-    response = HttpResponse(open(f'{BASE_DIR}/static/{mail.email.split("@")[0]}.pdf', 'rb').read())
-
-    response['Content-Disposition'] = f'attachment; filename={mail.email.split("@")[0]}.pdf'
-    return response
 
 
 def emailCreate(email):

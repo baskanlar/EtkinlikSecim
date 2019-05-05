@@ -1,17 +1,17 @@
 from fpdf import FPDF
 import os
-# from email.mime.text import MIMEText
 import smtplib
-# from email.MIMEMultipart import MIMEMultipart
-# from email.MIMEImage import MIMEImage
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage
 from email.mime.multipart import MIMEMultipart
+
+from django.http import HttpResponse
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def pdf_creates(etkinlikler, mail):
+    mails_ = f'{mail.split("@")[0]}.pdf'
     print(mail)
     pdf = FPDF()
     pdf.add_page()
@@ -24,8 +24,12 @@ def pdf_creates(etkinlikler, mail):
     for txt in etkinlikler:
         pdf.write(8, txt)
         pdf.ln(8)
-    pdf.output(f'{BASE_DIR}/static/{mail.split("@")[0]}.pdf', 'F')
+    pdf.output(f'{BASE_DIR}/static/{mails_}', 'F')
 
+    response = HttpResponse(open(f'{BASE_DIR}/static/{mails_}', 'rb').read())
+
+    response['Content-Disposition'] = f'attachment; filename={mails_}'
+    return response
 
 # def email_gonder(mail):
 #     msg = MIMEMultipart()
@@ -40,8 +44,8 @@ def pdf_creates(etkinlikler, mail):
 #     server.close()
 
 
-def pdf_sil(name):
-    os.remove(f'{BASE_DIR}/{name}')
+# def pdf_sil(name):
+#     os.remove(f'{BASE_DIR}/{name}')
 
 # email_gonder('yunusileri.tr@gmail.com')
 # mail = 'yunusileri.tr@gmail.com'
