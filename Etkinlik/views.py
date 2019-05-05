@@ -3,7 +3,7 @@ from .models import Etkinlik, EtkinlikMail, Mail
 from django.http import JsonResponse
 import json
 from django.core import serializers
-from .etkinlikPdf import pdf_creates
+from .etkinlikPdf import *
 from django.http import HttpResponse
 
 
@@ -16,7 +16,7 @@ def kullanici_etkinlik_cek(mail):
 
     pdf_creates(etkinlikler, mail.email)
     response = HttpResponse(open(f'{BASE_DIR}/static/{mail.email.split("@")[0]}.pdf', 'rb').read())
-    # response['Content-Type'] = 'application/vnd.ms-excel'
+
     response['Content-Disposition'] = f'attachment; filename={mail.email.split("@")[0]}.pdf'
     return response
 
@@ -61,8 +61,7 @@ def etkinlik_mail(request):
             etkinlik_mails.etkinlik = etkinlik
             etkinlik_mails.save()
 
-    kullanici_etkinlik_cek(mail)
-    return JsonResponse({'status': 'Tamamdır Abi'}, safe=False)
+    return kullanici_etkinlik_cek(mail)
 
 
 def home_view(request):
