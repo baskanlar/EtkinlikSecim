@@ -7,7 +7,7 @@ class Etkinlik(models.Model):
     baslangic_saati = models.CharField(max_length=5, verbose_name='başlangıç')
     bitis_saati = models.CharField(max_length=5, verbose_name='bitiş')
     etkinlik_adi = models.CharField(max_length=128, verbose_name='Etkinlik')
-    konusmaci_adi = models.CharField(max_length=128, verbose_name='Konuşmacı', null=True)
+    konusmaci_adi = models.CharField(max_length=128, verbose_name='Konuşmacı', null=False)
     salon = models.CharField(max_length=30)
 
     def __str__(self):
