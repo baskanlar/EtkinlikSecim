@@ -5,8 +5,10 @@ from .models import Etkinlik, Mail, EtkinlikMail
 
 
 class EtkinlikAdmin(admin.ModelAdmin):
-    list_display = ['Id', 'baslangic_saati', 'bitis_saati', 'etkinlik_adi', 'konusmaci_adi', 'salon', 'tarih',
-                    'bitis_saati']  # Listelerken Göstermek için
+    list_display = ['Id', 'baslangic_saati', 'bitis_saati', 'etkinlik_adi', 'konusmaci_adi', 'salon',
+                    'tarih', ]  # Listelerken Göstermek için
+
+    list_editable = ['etkinlik_adi', 'baslangic_saati', 'bitis_saati', 'konusmaci_adi', 'salon', 'tarih']
 
     class Meta:
         model = Etkinlik
