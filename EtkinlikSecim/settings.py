@@ -113,7 +113,7 @@ DATABASES = {
 """
 DEBUG = False
 
-ALLOWED_HOSTS = ['142.93.169.75']
+ALLOWED_HOSTS = ['142.93.169.75', 'etkinlikpdf.tk']
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DATABASES = {

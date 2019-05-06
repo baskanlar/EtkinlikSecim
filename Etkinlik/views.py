@@ -1,10 +1,8 @@
+from django.core import serializers
+from django.http import JsonResponse
 from django.shortcuts import render, get_object_or_404
 from .models import Etkinlik, EtkinlikMail, Mail
-from django.http import JsonResponse
-import json
-from django.core import serializers
-from .etkinlikPdf import *
-from django.http import HttpResponse
+from .etkinlikPdf import pdf_creates
 
 
 def kullanici_etkinlik_cek(mail):
@@ -14,13 +12,7 @@ def kullanici_etkinlik_cek(mail):
         etkinlikler.append(
             f'{etkinlik.etkinlik.baslangic_saati}-{etkinlik.etkinlik.bitis_saati}   {etkinlik.etkinlik.etkinlik_adi}    {etkinlik.etkinlik.salon}   {etkinlik.etkinlik.konusmaci_adi}')
 
-    if pdf_creates(etkinlikler, mail.email):
-        mails_ = f'{mail.email.split("@")[0]}.pdf'
-        response = HttpResponse(open(f'{BASE_DIR}/static/{mails_}', 'rb').read())
-        response['Content-Disposition'] = f'attachment; filename={mails_}'
-        return response
-    else:
-        return JsonResponse({'status': 'Hata'}, safe=False)
+        return pdf_creates(etkinlikler, mail.email)
 
 
 def emailCreate(email):
