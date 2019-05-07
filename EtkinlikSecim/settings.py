@@ -97,7 +97,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Geliştirici
-"""
+
 DEBUG = True
 
 ALLOWED_HOSTS = []
@@ -126,3 +126,4 @@ DATABASES = {
         'PORT': '',
     }
 }
+"""
